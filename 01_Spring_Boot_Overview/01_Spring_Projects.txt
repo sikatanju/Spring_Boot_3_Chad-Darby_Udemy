@@ -1,0 +1,11 @@
+-- Spring projects are additional Spring frameworkd built-on top of the core Spring Framework
+
+-> Simply think of them as add-ons, you use only what you need.
+
+    i.   Spring Cloud, Spring Data
+    ii.  Spring Batch, Spring Secuirty
+    iii. Spring Web Services, Spring LDAP
+    iv.  Etc.
+
+-- These are all optional.
+-- All the projects are available at : spring.io/projects

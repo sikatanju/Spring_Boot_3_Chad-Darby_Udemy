@@ -1,0 +1,13 @@
+-- The Problem : 
+    Building a Spring Application is really hard.
+
+-- Why is it so Hard ? 
+-> It would be great if there was a simple list of Maven dependencies
+-> etc.
+
+The Solution : 
+
+-> Spring Boot Starters are curated list of Maven Dependencies . 
+-> A collection of Depenedencies that are group togethe.
+-> Tested and Verified by Spring Developers.
+-> Makes it much easier for the Developer to get started.
