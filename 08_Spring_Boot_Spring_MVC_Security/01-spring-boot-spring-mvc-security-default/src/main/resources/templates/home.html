@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Luv2code Company Homepage</title>
+</head>
+<body>
+  <h2>
+    Luv2Code Company Homepage
+  </h2>
+  <hr>
+  <p>
+      Welcome to the luv2code company home page ! Yohoo !!!
+  </p>
+
+  <!-- Diplay username and role -->
+  <p>
+      User: <span sec:authentication="principal.username"></span>
+      <br><br>
+      Role(s) : <span sec:authentication="principal.authorities"></span>
+  </p>
+
+  <hr>
+
+  <!-- Add a link to point to /leaders... this is for manager -->
+  <div sec:authorize="hasRole('MANAGER')">
+      <p>
+          <a th:href="@{/leaders}">Leadership Meeting</a>
+          (Only for manager peeps)
+      </p>
+  </div>
+
+  <div sec:authorize="hasRole('ADMIN')">
+      <p>
+        <a th:href="@{/systems}">Systems Control</a>
+        (Only for admin peeps)
+      </p>
+  </div>
+
+
+  <!-- Add a logout a button -->
+  <form action="#" th:action="@{/logout}" method="POST">
+    <input type="submit" value="Logout" />
+  </form>
+
+
+</body>
+</html>
