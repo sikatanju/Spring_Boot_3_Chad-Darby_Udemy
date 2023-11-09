@@ -71,8 +71,6 @@ public class EmployeeController {
 		// use a redirect to prevent duplicate submissions
 		return "redirect:/employees/list";
 	}
-
-
 }
 
 

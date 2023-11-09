@@ -45,10 +45,11 @@ public class DemoSecurityConfig {
                         .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
         );
         // Use HTTP basic Authentication
-        http.httpBasic();
+        http.httpBasic(Customizer.withDefaults());
 
-        // Disabling CSRF
-        http.csrf().disable();
+		// disable Cross Site Request Forgery
+		// in general, not required for stateless REST APIs that use POST, PUT, DELETE and/or PATCH
+        http.csrf(csrf -> csrf.disable());
 
         return http.build();
     }
